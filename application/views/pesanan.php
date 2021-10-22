@@ -25,6 +25,6 @@
             <td><?= $this->input->post('sepatu') ?></td>
         </tr>
     </table>
-    <a href="<?= base_url('welcome') ?>">pesan lagi</a>
+    <a href="<?= base_url('/welcome') ?>">pesan lagi</a>
 </body>
 </html>
