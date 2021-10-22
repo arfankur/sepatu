@@ -24,6 +24,11 @@
             <td>:</td>
             <td><?= $this->input->post('sepatu') ?></td>
         </tr>
+        <tr>
+            <td>Ukuran</td>
+            <td>:</td>
+            <td><?= $this->input->post('ukuran') ?></td>
+        </tr>
     </table>
     <a href="<?= base_url('/welcome') ?>">pesan lagi</a>
 </body>
