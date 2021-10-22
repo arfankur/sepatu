@@ -1,6 +1,3 @@
-<?php 
-// var_dump($sepatu) 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +8,6 @@
 </head>
 <body>
     <?php 
-    // if (validation_errors()) {
-        // var_dump(validation_errors());
-    // }
     echo validation_errors() ;
     ?>
 <form action="<?= base_url('welcome/pesan') ?>" method="post">
