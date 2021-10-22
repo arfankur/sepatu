@@ -16,7 +16,7 @@
     // }
     echo validation_errors() ;
     ?>
-<form action="/welcome/pesan/" method="post">
+<form action="<?= base_url('welcome/pesan') ?>" method="post">
         Nama: <br>
         <input required type="text" name="nama" autocomplete="off" autofocus> <br>
         Nomor HP: <br>

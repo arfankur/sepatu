@@ -24,13 +24,16 @@ class Welcome extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Sepatu');
+		$this->load->helper('url');
+		$this->load->helper('file');
+		$this->load->library('form_validation');
 		
 	}
 	public function index()
 	{
 		$data['sepatu'] = $this->Sepatu->getAllSepatu();
 		$this->load->view('sepatu',$data);
-		// return $this->load->view('pesanan');
+		
 	}
 	public function pesan(){
 		if (count($_POST) === 0) {
