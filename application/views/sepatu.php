@@ -27,7 +27,7 @@
         <?php 
         foreach ($sepatu as $sepatu) {
             ?>
-            <option value="<?= $sepatu['merk'] ?>-<?= $sepatu['harga'] ?>"><?= $sepatu['merk'] ?> - Rp <?= number_format($sepatu['harga'],0,'.','.') ?></option>
+            <option value="<?= $sepatu['merk'] ?> - Rp <?= number_format($sepatu['harga'],0,'.','.') ?>"><?= $sepatu['merk'] ?> - Rp <?= number_format($sepatu['harga'],0,'.','.') ?></option>
             <?php
         }
         ?>
