@@ -36,9 +36,9 @@ class Welcome extends CI_Controller
 		
 	}
 	public function pesan(){
-		if (count($_POST) === 0) {
-			redirect(base_url('welcome/'));
-		}
+		// if (count($_POST) === 0) {
+		// 	redirect(base_url('welcome/'));
+		// }
 		$this->form_validation->set_rules($this->Sepatu->sepatuRule());
 		
 		if ($this->form_validation->run() == false) {
@@ -46,7 +46,10 @@ class Welcome extends CI_Controller
 				'sepatu' => $this->Sepatu->getAllSepatu(),
 			]);
 		} else {
-			$this->load->view('pesanan');
+			$this->load->view('pesanan',[
+				'pesanan' => $this->input->post(),
+				'total_harga' => $this->input->post('jumlah_beli') * (int) explode('-',$this->input->post('sepatu'))[1]
+			]);
 		}
 		
 		

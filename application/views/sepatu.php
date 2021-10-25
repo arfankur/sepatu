@@ -10,7 +10,6 @@
 
 <body>
     <center>
-
         <?php
     echo validation_errors();
     ?>
@@ -25,7 +24,7 @@
             <?php
             foreach ($sepatu as $sepatu) {
                 ?>
-                <option value="<?= $sepatu['merk'] ?> - Rp <?= number_format($sepatu['harga'], 0, '.', '.') ?>"><?= $sepatu['merk'] ?> - Rp <?= number_format($sepatu['harga'], 0, '.', '.') ?></option>
+                <option value="<?= $sepatu['merk'] ?>-<?=$sepatu['harga'] ?>"><?= $sepatu['merk'] ?> - Rp <?= number_format($sepatu['harga'], 0, '.', '.') ?></option>
             <?php
             }
             ?>
@@ -40,7 +39,9 @@
                 <?php
             }
             ?>
-        </select><br><br>
+        </select><br>
+        Jumlah Beli: <br>
+        <input type="number" required name="jumlah_beli" id=""> <br> <br>
         <input type="submit" value="Pesan Sepatu">
     </form>
 </center>

@@ -39,8 +39,18 @@ class Sepatu extends CI_Model{
 			),
 			array(
 					'field' => 'sepatu',
-					'label' => 'Sepatu Yang Dipesan',
+					'label' => 'Sepatu',
 					'rules' => 'required'
+			),
+			array(
+					'field' => 'ukuran',
+					'label' => 'Ukuran',
+					'rules' => 'required|integer'
+			),
+			array(
+					'field' => 'jumlah_beli',
+					'label' => 'Jumlah Beli',
+					'rules' => 'required|integer'
 			),
 			
 	);
